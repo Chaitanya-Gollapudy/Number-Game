@@ -79,7 +79,7 @@ function checkGuess() {
   let userGuess = Number(guessField.value);
 
   if (userGuess === randomNumber) {
-    lastResult.textContent = "Wow! You got it right, lucky bastard!";
+    lastResult.textContent = "Wow! You got it right !!";
     themeMusic.stop();
     if (mute === false) winnerSound.play();
     setGameOver();
@@ -97,14 +97,14 @@ function checkGuess() {
         wrongSound.play();
         laughSound.play();
       }
-      lastResult.textContent = "Too low, idiot!";
+      lastResult.textContent = "Too low !!";
       guessSubmit.value = "Check again";
     } else if (userGuess > randomNumber) {
       if (mute === false) {
         wrongSound.play();
         laughSound.play();
       }
-      lastResult.textContent = "Jerk, that is too high!";
+      lastResult.textContent = "That's is too high!";
       guessSubmit.value = "Check again";
     }
   }
